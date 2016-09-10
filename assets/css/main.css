@@ -1,0 +1,65 @@
+
+
+
+/*// CSS DEPAULT*/
+.panel > .panel-heading{
+	background-image: url('../images/bg-sidebar-title.png');
+}
+
+.gallery{
+    display: inline-block;
+    margin-top: 20px;
+}
+.container{
+	/*background-image: url('../images/bg-main.jpg');*/
+	background-color: #fff;
+	box-shadow: 0 0 5px 0;
+	margin: 20px 0;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+/*// MENU */
+.menu{
+	margin-top: 12px;
+	border-right: 1px solid #FFFFFF;
+	border-radius: 10px;
+}
+
+.sidebar{
+	margin-top: 20px;
+	padding: 0;
+}
+	.sidebar > .panel{
+		margin-left: -15px;
+	}
+	.sidebar > .panel > .panel-body > a > img{
+		margin-bottom: 10px;
+	}
+
+.content{
+	margin-top: 20px;
+	border-radius: 5px;
+}
+	.content > .well, .welcome{
+		
+	}
+	.content > .welcome > .panel-body > h2{
+		margin-top: -3px;
+		color: #0093a0;
+	}
+
+.footer-top{
+	padding-top: 20px;
+	background-color: #ececec;
+}
+.footer-button{
+	padding-top: 0;
+	background-color: #888;
+	border-radius: 0 0 5px 5px;
+}
+	.footer-button > p{
+		padding: 15px 0 5px 0;
+		text-align: center;
+		color: #fff;
+	}
