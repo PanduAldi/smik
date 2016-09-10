@@ -74,12 +74,15 @@ class Direktori extends CI_Controller {
 		$this->template->load('main/v_template','main/v_staf',$data);
 	}
 
+	public function staf_json()
+	{
+		$this->datatables->select('nip');
+	}
 
 	public function siswa_json()
 	{
 		$no = 1;
 
-		$this->datatables->add_column('no', $no++);
 		$this->datatables->select('nis, nama, alamat, jk, agama, ttl, kelas');
 		$this->datatables->from('dir_siswa');
 		echo $this->datatables->generate();

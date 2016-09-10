@@ -12,7 +12,7 @@
                 </style>
                 <div class="container-fluid">
                 <h3 class="breack">Data Alumni</h3>
-                <table id="example" class="display" cellspacing="0" width="100%">
+                <table id="example" class="table table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>NO.</th>
