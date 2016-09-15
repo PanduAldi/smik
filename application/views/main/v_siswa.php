@@ -35,16 +35,7 @@
                                 'infoEmpty' : "Data Masih Kosong",
                                 'zeroRecords' : "Data yang dicari tidak ada"
                             },
-                            buttons : [
-                                        {
-                                        extend: 'copy',
-                                        text: '<u>C</u>opy',
-                                        key: {
-                                            key: 'c',
-                                            altKey: true
-                                        }
-                                    }
-                            ]
+                            "order" : [[3, "asc"]]
                         });
                     })
                 </script>

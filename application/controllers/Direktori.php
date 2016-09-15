@@ -6,7 +6,6 @@ class Direktori extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->library('datatables');
-
 		
 	}
 
@@ -86,6 +85,24 @@ class Direktori extends CI_Controller {
 		$this->datatables->select('nis, nama, alamat, jk, agama, ttl, kelas');
 		$this->datatables->from('dir_siswa');
 		echo $this->datatables->generate();
+	}
+
+	public function alumni_json()
+	{
+		$this->datatables->select('nis, nama, alamat, jk, agama, ttl, angkatan');
+		$this->datatables->from('dir_alumni');
+		echo $this->datatables->generate();
+
+		/**
+                            <td><?php echo $no ?></td>
+                            <td><?php echo $row->nis ?></td>
+                            <td><?php echo $row->nama ?></td>
+                            <td><?php echo $row->alamat ?></td>
+                            <td><?php echo $row->jk ?></td>
+                            <td><?php echo $row->agama ?></td>
+                            <td><?php echo $row->ttl ?></td>
+                            <td><?php echo $row->angkatan ?></td>
+		*/
 	}
 
 	function halaman($url){
