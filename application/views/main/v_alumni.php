@@ -10,12 +10,33 @@
                         text-decoration: none;
                     }
                 </style>
+
+                <script>
+                    $(document).ready(function(){
+                        $("#alumni_data").dataTable({
+                            "processing" : true, 
+                            "serverSide" : true,
+                            "ajax" : {
+                                "url" : "<?php echo site_url('direktori/alumni_json') ?>",
+                                "type" : "POST"
+                            },
+                            "columns" : [
+                                            {data : "nis"},
+                                            {data : "nama"},
+                                            {data : "alamat"},
+                                            {data : "jk"},
+                                            {data : "agama"},
+                                            {data : "ttl"},
+                                            {data : "angkatan"}
+                                        ]
+                        })
+                    })
+                </script>
                 <div class="container-fluid">
                 <h3 class="breack">Data Alumni</h3>
-                <table id="example" class="table table-bordered" cellspacing="0" width="100%">
+                <table id="alumni_data" class="table table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>
-                            <th>NO.</th>
                             <th>NIS</th>
                             <th>Nama</th>
                             <th>Alamat</th>
@@ -25,20 +46,6 @@
                             <th>Tahun Lulus</th>
                         </tr>
                     </thead>
-                    <tbody>
-                    <?php $no=1; foreach($record->result() as $row){ ?>
-                        <tr class="gradeU">
-                            <td><?php echo $no ?></td>
-                            <td><?php echo $row->nis ?></td>
-                            <td><?php echo $row->nama ?></td>
-                            <td><?php echo $row->alamat ?></td>
-                            <td><?php echo $row->jk ?></td>
-                            <td><?php echo $row->agama ?></td>
-                            <td><?php echo $row->ttl ?></td>
-                            <td><?php echo $row->angkatan ?></td>
-                        </tr>
-                    <?php $no++; } ?>
-                    </tbody>
                 </table>
                 </div>
 			</div><!-- content -->

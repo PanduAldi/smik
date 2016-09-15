@@ -22,7 +22,9 @@
 							<div class="col-lg-4 col-md-4 col-xs-6">
 								<div class="thumbnail">
 									<div class="caption">
-										<h4 style="margin-top: 30px; color: white;"><?php echo $row->nama ?></h4>
+										<h4>
+											<a href="<?php echo site_url('gallery/detail_gallery/'.$row->id) ?>" style="margin-top: 30px; color: white; text-decoration: none;"><?php echo $row->nama ?></a>
+										</h4>
 					                    <p><a href="<?php echo site_url('gallery/detail_gallery/'.$row->id) ?>" class="btn btn-success btn-sm">Detail Gallery</a></p>
 									</div>
 									<img src="<?php echo base_url().'upload/gallery/'.$row->gambar ?>" alt="">
